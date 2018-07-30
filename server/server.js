@@ -7,6 +7,7 @@ var {mongoose}=require('./db/mongoose');
 var {Todo}=require('../models/todo');
 var {User}=require('../models/user');
 var app=express();
+const port=proces.env.PORT||3000;
 app.use(bodyParser.json())
 
 //post request
@@ -53,7 +54,7 @@ app.get('/todos', (req, res) => {
 
 
 app.listen(3000,()=>{
-    console.log('Started on port 3000');
+    console.log(`Started up at port  ${port}`);
 });
 
 
