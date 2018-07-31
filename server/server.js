@@ -1,3 +1,4 @@
+//author shivam
 var express=require('express');
 var bodyParser=require('body-parser');
 const {ObjectID}=require('mongodb');
@@ -7,6 +8,7 @@ var {mongoose}=require('./db/mongoose');
 var {Todo}=require('../models/todo');
 var {User}=require('../models/user');
 var app=express();
+//express.Router
 const port=process.env.PORT||3000;
 //mongodb://shivam sharma:@fiqjxn87@ds111059.mlab.com:11059/shivam
 app.use(bodyParser.json())
