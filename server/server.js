@@ -8,7 +8,7 @@ var {Todo}=require('../models/todo');
 var {User}=require('../models/user');
 var app=express();
 const port=process.env.PORT||3000;
-
+//mongodb://shivam sharma:@fiqjxn87@ds111059.mlab.com:11059/shivam
 app.use(bodyParser.json())
 
 //post request
@@ -54,7 +54,7 @@ app.get('/todos', (req, res) => {
 
 
 
-app.listen(3000,()=>{
+app.listen(port,()=>{
     console.log(`Started up at port  ${port}`);
 });
 
