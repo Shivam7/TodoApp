@@ -1,3 +1,22 @@
+const jwt=require('jsonwebtoken');
+const bcrypt=require('bcryptjs');
+ var password='!123abc';
+
+  bcrypt.genSalt(10,(err,salt)=>{
+    bcrypt.hash(password,salt,(err,hash)=>{
+    console.log("hashed pass", hash);
+      });
+  });
+
+  var hashedPassword='$2a$10$9P1CXAN43coQttvlHCo7Qus3x7KwwsJXOHoBDDE9IsVfLHpUUaT5G';
+  bcrypt.compare(password,hashedPassword,(err,res)=>{
+      console.log(res);
+  })
+
+
+
+
+
 /* const {SHA256}=require('crypto-js');
 var message='I am user number 3'
 var   hash=SHA256(message).toString();
@@ -20,7 +39,7 @@ else{
 }
 */
 
-const jwt=require('jsonwebtoken');
+/*
 
 var data={
     id:10
@@ -29,4 +48,6 @@ var token=jwt.sign(data,'123abc');
 console.log(token);
 
 var decoded=jwt.verify(token,'123abc');
-console.log((decoded));
+console.log((decoded));*/
+
+
